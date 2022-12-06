@@ -25,11 +25,11 @@ public class StreamUtilities {
     public static int countWorkablePeople(List<Person> people) {
         return (int) people.stream()
                 .filter(person -> person.age() >= 18)
-                .filter(StreamUtilities::isOnPension)
+                .filter(StreamUtilities::isNotOnPension)
                 .count();
     }
 
-    private static boolean isOnPension(Person person) {
+    private static boolean isNotOnPension(Person person) {
         return (person.sex().equals(Sex.MAN) && person.age() < 60) ||
                 (person.sex().equals(Sex.WOMAN) && person.age() < 55);
     }
