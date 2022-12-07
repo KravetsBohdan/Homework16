@@ -1,5 +1,5 @@
 package com.bkravets.models;
 
 public enum Sex {
-    MAN, WOMAN
+    MAN, WOMAN, OTHER
 }
