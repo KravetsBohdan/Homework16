@@ -38,7 +38,7 @@ class StreamUtilitiesTest {
 
         double averageAge = StreamUtilities.getAverageAgeAmongMen(people);
 
-        Assertions.assertThat(averageAge)
+        Assertions.assertThat(averageAge).isEqualTo(36.0);
                 .isEqualTo(36.0);
     }
 
